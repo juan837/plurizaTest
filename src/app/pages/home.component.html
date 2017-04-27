@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <app-find></app-find>
+      <app-tags
+              [tags]="tagsTreading"
+              [collapsed]="false"
+              [title]="'TRENDING TAGS'"
+              ></app-tags>
+      <app-tags
+              [tags]="tagsTreading"
+              [collapsed]="true"
+              [title]="'FEATURED SHOWS'"
+              ></app-tags>
+    </div>
+    <div class="col-sm-9">
+      <app-people-list></app-people-list>
+    </div>
+  </div>
+</div>

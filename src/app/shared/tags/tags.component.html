@@ -1,0 +1,23 @@
+<!--<button type="button" class="btn btn-primary btn-block"-->
+        <!--(click)="isCollapsed = !isCollapsed">Toggle collapse-->
+<!--</button>-->
+
+<p class="text-justify" (click)="isCollapsed = !isCollapsed">
+  {{ title }}
+</p>
+
+<div (collapsed)="collapsed_function($event)"
+     (expanded)="expanded($event)"
+     [collapse]="isCollapsed"
+     class="card card-block card-header">
+  <div class="well well-lg">
+    <ul class="nav flex-column">
+      <li class="nav-item" *ngFor="let tag of tags; let i = index">
+
+        <a class="nav-link" href="{{ tag.url }}">
+          <span>{{ i + 1 }}.- </span> {{ tag.text }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

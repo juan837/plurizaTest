@@ -1,0 +1,69 @@
+<form action="">
+  <div class="form-group">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button">Go!</button>
+      </span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <ng-select #ngGender [allowClear]="true"
+               [items]="itemsGender"
+               [disabled]="disabled"
+               (selected)="selectedGender($event)"
+               placeholder="Gender">
+    </ng-select>
+  </div>
+
+  <div class="form-group">
+    <ng-select [allowClear]="true"
+               [items]="itemsOrientation"
+               [disabled]="disabled"
+               (selected)="selectedOrientation($event)"
+               placeholder="Orientation">
+    </ng-select>
+  </div>
+
+  <div class="form-group">
+    <ng-select [allowClear]="true"
+               [items]="itemsBodyType"
+               [disabled]="disabled"
+               (selected)="selectedBodyType($event)"
+               placeholder="Body Type">
+    </ng-select>
+  </div>
+
+  <div class="form-group">
+    <ng-select [allowClear]="true"
+               [items]="itemsAge"
+               [disabled]="disabled"
+               (selected)="selectedAge($event)"
+               placeholder="Age">
+    </ng-select>
+  </div>
+
+  <div class="form-group">
+    <ng-select [allowClear]="true"
+               [items]="itemsEfectivity"
+               [disabled]="disabled"
+               (selected)="selectedEfectivity($event)"
+               placeholder="Efectivity">
+    </ng-select>
+  </div>
+
+  <div class="form-group">
+    <ng-select [allowClear]="true"
+               [items]="itemsRegion"
+               [disabled]="disabled"
+               (selected)="selectedRegion($event)"
+               placeholder="Region">
+    </ng-select>
+  </div>
+
+  <div class="row">
+    <a href="#" (click)="clearFilters($event)">Reset Filter</a>
+  </div>
+</form>
+
